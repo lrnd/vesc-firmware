@@ -270,6 +270,14 @@ typedef enum {
 	CFG_PARAM_IMU_rot_roll,
 	CFG_PARAM_IMU_rot_pitch,
 	CFG_PARAM_IMU_rot_yaw,
+
+	//PID
+	CFG_PARAM_PID_pos_kp,
+	CFG_PARAM_PID_pos_ki,
+	CFG_PARAM_PID_pos_kd,
+	CFG_PARAM_PID_vel_kp,
+	CFG_PARAM_PID_vel_ki,
+	CFG_PARAM_PID_vel_kd,
 } CFG_PARAM;
 
 typedef struct {

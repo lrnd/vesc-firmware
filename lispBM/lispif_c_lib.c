@@ -488,6 +488,13 @@ static bool lib_set_cfg_float(CFG_PARAM p, float value) {
 		case CFG_PARAM_l_temp_accel_dec: mcconf->l_temp_accel_dec = value; changed_mc = 1; res = true; break;
 		case CFG_PARAM_l_min_duty: mcconf->l_min_duty = value; changed_mc = 1; res = true; break;
 		case CFG_PARAM_l_max_duty: mcconf->l_max_duty = value; changed_mc = 1; res = true; break;
+		//THIS COULD BE DANGEROUS... NEEDS LOTS OF TESTING
+		case CFG_PARAM_PID_pos_kp: mcconf->p_pid_kp = value; changed_mc = 1; res = true; break;
+		case CFG_PARAM_PID_pos_ki: mcconf->p_pid_ki = value; changed_mc = 1; res = true; break;
+		case CFG_PARAM_PID_pos_kd: mcconf->p_pid_kd = value; changed_mc = 1; res = true; break;
+		case CFG_PARAM_PID_vel_kp: mcconf->s_pid_kp = value; changed_mc = 1; res = true; break;
+		case CFG_PARAM_PID_vel_ki: mcconf->s_pid_ki = value; changed_mc = 1; res = true; break;
+		case CFG_PARAM_PID_vel_kd: mcconf->s_pid_kd = value; changed_mc = 1; res = true; break;
 
 		case CFG_PARAM_IMU_accel_confidence_decay: appconf->imu_conf.accel_confidence_decay = value; changed_app = 1; res = true; break;
 		case CFG_PARAM_IMU_mahony_kp: appconf->imu_conf.mahony_kp = value; changed_app = 1; res = true; break;
